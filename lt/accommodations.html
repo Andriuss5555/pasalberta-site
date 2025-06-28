@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apgyvendinimas - Pasalberta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-green-800 text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Pasalberta.lt</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Pradžia</a>
+        <a href="about.html" class="hover:underline">Apie mus</a>
+        <a href="accommodations.html" class="hover:underline font-semibold">Apgyvendinimas</a>
+        <a href="gallery.html" class="hover:underline">Galerija</a>
+        <a href="booking.html" class="hover:underline">Rezervacija</a>
+        <a href="contact.html" class="hover:underline">Kontaktai</a>
+        <a href="faq.html" class="hover:underline">DUK</a>
+        <a href="reviews.html" class="hover:underline">Atsiliepimai</a>
+      </nav>
+      <div>
+        <select onchange="location = this.value" class="text-black p-1 rounded">
+          <option value="/lt/accommodations.html" selected>LT</option>
+          <option value="/en/accommodations.html">EN</option>
+          <option value="/lv/accommodations.html">LV</option>
+          <option value="/pl/accommodations.html">PL</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Accommodation Section -->
+  <section class="max-w-6xl mx-auto p-8">
+    <h2 class="text-3xl font-bold mb-6">Apgyvendinimas</h2>
+    <p class="mb-8 text-gray-700">
+      Mūsų sodyboje yra <strong>trys namukai</strong>:
+    </p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- House 1 -->
+      <div class="border rounded shadow p-4">
+        <img src="../assets/images/pirtele1.jpg" alt="Pirties namukas 1" class="w-full h-64 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Pirties namukas 1</h3>
+        <p class="text-gray-700">Namelis su mini virtuve, pobūvių sale bei pirtimi pirmame aukšte. Antrame aukšte yra lovos su galimybe nakvoti iki 15-17 asmunų.</p>
+      </div>
+
+      <!-- House 2 -->
+      <div class="border rounded shadow p-4">
+        <img src="../assets/images/pirtele2.jpg" alt="Pirties namukas 2" class="w-full h-64 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Pirties namukas 2</h3>
+        <p class="text-gray-700">Toks pat patogus kaip pirmasis tik šiek tiek mažesnis: su pirtimi, virtuvėle ir miegamosiomis vietomis antrame aukšte iki 11-13 asmenų.</p>
+      </div>
+
+      <!-- House 3 -->
+      <div class="md:col-span-2 border rounded shadow p-4">
+        <img src="../assets/images/namas.png" alt="Didysis pobūvių namas" class="w-full h-64 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Didysis pobūvių namas</h3>
+        <p class="text-gray-700">Šiame name yra erdvi pobūvių salė, kurioje telpa iki 44 žmonių, 13 kambarių su galimybe apgyvendinti iki 32 svečių bei didelė, pilnai įrengta virtuvė. Puikiai tinka didesniems renginiams ir šeimos šventėms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white text-center p-4 mt-8">
+    <p>&copy; 2025 Pasalberta.lt. Visos teisės saugomos.</p>
+  </footer>
+</body>
+</html>
