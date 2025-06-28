@@ -1,33 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Pasalberta</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pasalberta - Poilsis gamtoje</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#008080',
-            accent: '#f4a261',
-          }
-        }
-      }
-    };
-  </script>
 </head>
-<body class="font-sans bg-gray-50 text-gray-800">
-  <header class="bg-primary text-white p-4">
-    <h1 class="text-xl font-semibold">Pasalberta</h1>
+<body class="bg-white text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-green-800 text-white p-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-semibold">Pasalberta</h1>
+      <nav class="space-x-4">
+        <a href="/lt/index.html" class="hover:underline">Pradžia</a>
+        <a href="/lt/about.html" class="hover:underline">Apie mus</a>
+        <a href="/lt/accommodations.html" class="hover:underline">Apgyvendinimas</a>
+        <a href="/lt/gallery.html" class="hover:underline">Galerija</a>
+        <a href="/lt/booking.html" class="hover:underline">Rezervacija</a>
+        <a href="/lt/contact.html" class="hover:underline">Kontaktai</a>
+        <a href="/lt/faq.html" class="hover:underline">DUK</a>
+        <a href="/lt/reviews.html" class="hover:underline">Atsiliepimai</a>
+        <!-- Language Switcher -->
+        <span class="ml-4">|
+          <a href="/lt/index.html" class="underline">LT</a> ·
+          <a href="/en/index.html">EN</a> ·
+          <a href="/lv/index.html">LV</a> ·
+          <a href="/pl/index.html">PL</a>
+        </span>
+      </nav>
+    </div>
   </header>
-  <main class="p-6">
-    <h2 class="text-2xl font-bold mb-4">Welcome to Pasalberta</h2>
-    <p>This is the welcome to pasalberta page for Pasalberta rental accommodations.</p>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-[70vh] flex items-center justify-center text-white" style="background-image: url('assets/images/IMG_20190609_124719.jpg')">
+    <div class="bg-black/50 p-8 rounded">
+      <h2 class="text-4xl font-bold mb-2">Poilsis gamtos apsuptyje</h2>
+      <p class="text-lg">Kaimo turizmo sodyba Jūsų poilsiui ir šventėms</p>
+    </div>
+  </section>
+
+  <!-- Welcome Content -->
+  <main class="max-w-4xl mx-auto p-8">
+    <h3 class="text-2xl font-bold mb-4">Sveiki atvykę į Pasalberta!</h3>
+    <p class="mb-4">Pasalberta – tai ramybės oazė apsupta Lietuvos gamtos. Nuomojame jaukius namelius su visais patogumais, krepšinio aikštele, pirtimi ir daugybe erdvės poilsiui ar renginiams.</p>
+    <p class="mb-4">Peržiūrėkite nuotraukas, skaitykite atsiliepimus, ir rezervuokite savo laiką gamtoje jau šiandien.</p>
+    <a href="/lt/booking.html" class="inline-block mt-4 px-6 py-2 bg-green-700 text-white rounded hover:bg-green-900">Rezervuoti</a>
   </main>
-  <footer class="bg-gray-200 text-center p-4 mt-10">
-    &copy; 2025 Pasalberta. All rights reserved.
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center p-4 mt-12">
+    <p>&copy; 2025 Pasalberta. Visos teisės saugomos.</p>
   </footer>
 </body>
 </html>
