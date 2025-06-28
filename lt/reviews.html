@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atsiliepimai - Pasalberta</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atsiliepimai - PasAlberta</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header -->
   <header class="bg-green-800 text-white p-4 shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Pasalberta.lt</h1>
+      <h1 class="text-2xl font-bold">PasAlberta.lt</h1>
       <nav class="space-x-4">
         <a href="index.html" class="hover:underline">Pradžia</a>
         <a href="about.html" class="hover:underline">Apie mus</a>
@@ -26,29 +26,55 @@
 
   <!-- Reviews Section -->
   <section class="max-w-4xl mx-auto p-8">
-    <h2 class="text-3xl font-bold mb-6 text-center">Svečiai apie mus</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center">Atsiliepimai iš svečių</h2>
 
-    <div class="space-y-6">
-      <div class="bg-green-50 p-4 rounded shadow">
-        <p class="text-lg italic">"Tobula vieta mūsų šeimos poilsiui. Nuostabi gamta, patogūs nameliai ir labai malonūs šeimininkai."</p>
-        <p class="text-right text-sm text-gray-600 mt-2">- Laura M.</p>
+    <div class="space-y-6 mb-12">
+      <div class="border p-4 rounded shadow">
+        <p class="text-gray-700 italic">„Labai šauni vieta poilsiui! Nameliai jaukūs, aplinka tvarkinga, tikrai sugrįšime dar kartą.“</p>
+        <p class="text-sm text-right text-gray-600 mt-2">– Mantas iš Vilniaus</p>
       </div>
-
-      <div class="bg-green-50 p-4 rounded shadow">
-        <p class="text-lg italic">"Sodyboje šventėme vestuves – viskas buvo nepriekaištinga. Rekomenduoju visiems, ieškantiems jaukios ir gražios vietos."</p>
-        <p class="text-right text-sm text-gray-600 mt-2">- Tomas ir Justina</p>
+      <div class="border p-4 rounded shadow">
+        <p class="text-gray-700 italic">„Puiki vieta švęsti gimtadienius ar tiesiog atsipalaiduoti. Labai malonūs šeimininkai.“</p>
+        <p class="text-sm text-right text-gray-600 mt-2">– Rūta iš Klaipėdos</p>
       </div>
-
-      <div class="bg-green-50 p-4 rounded shadow">
-        <p class="text-lg italic">"Puiki vieta šventėms ir poilsiui. Ypač patiko pirtis ir krepšinio aikštelė. Tik geri atsiliepimai!"</p>
-        <p class="text-right text-sm text-gray-600 mt-2">- Dainius B.</p>
+      <div class="border p-4 rounded shadow">
+        <p class="text-gray-700 italic">„Pirtis, gamta, ramybė – viskas ko reikia geram savaitgaliui. Ačiū!“</p>
+        <p class="text-sm text-right text-gray-600 mt-2">– Tomas ir Ieva</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <p class="text-gray-700 italic">„Esame labai patenkinti savo viešnage – viskas puikiai organizuota, vieta labai patogi, nuostabi gamta.“</p>
+        <p class="text-sm text-right text-gray-600 mt-2">– Lina iš Šiaulių</p>
+      </div>
+      <div class="border p-4 rounded shadow">
+        <p class="text-gray-700 italic">„Rekomenduojame visiems norintiems ramaus poilsio gamtoje su galimybe pasimėgauti pirtimi.“</p>
+        <p class="text-sm text-right text-gray-600 mt-2">– Jonas ir šeima</p>
       </div>
     </div>
+
+    <!-- Submit Review Form -->
+    <h3 class="text-2xl font-semibold mb-4">Palikite savo atsiliepimą</h3>
+    <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" class="bg-green-50 p-6 rounded shadow space-y-4">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://pasalberta.lt/lt/thank-you.html">
+      <div>
+        <label for="name" class="block font-medium">Vardas:</label>
+        <input type="text" id="name" name="Vardas" class="w-full border rounded p-2" required>
+      </div>
+      <div>
+        <label for="city" class="block font-medium">Miestas:</label>
+        <input type="text" id="city" name="Miestas" class="w-full border rounded p-2">
+      </div>
+      <div>
+        <label for="message" class="block font-medium">Jūsų atsiliepimas:</label>
+        <textarea id="message" name="Atsiliepimas" rows="4" class="w-full border rounded p-2" required></textarea>
+      </div>
+      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-900">Siųsti</button>
+    </form>
   </section>
 
   <!-- Footer -->
   <footer class="bg-green-800 text-white text-center p-4 mt-12">
-    <p>&copy; 2025 Pasalberta.lt. Visos teisės saugomos.</p>
+    <p>&copy; 2025 PasAlberta.lt. Visos teisės saugomos.</p>
   </footer>
 </body>
 </html>
