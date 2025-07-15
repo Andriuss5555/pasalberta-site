@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atsiliepimai - PasAlberta</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind + form validation
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#008080',
+            accent: '#f4a261',
+          }
+        }
+      }
+    };
+
+    function validatePhoneNumber() {
+      const phone = document.getElementById('phone').value.trim();
+      const phoneRegex = /^\+\d{8,15}$/;
+
+      if (!phoneRegex.test(phone)) {
+        alert("Įveskite teisingą telefono numerį su šalies kodu (pvz., +37061234567).");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header -->
@@ -30,6 +54,7 @@
     <h2 class="text-3xl font-bold mb-6 text-center">Atsiliepimai iš svečių</h2>
 
     <div class="space-y-6 mb-12">
+      <!-- Existing reviews -->
       <div class="border p-4 rounded shadow">
         <p class="text-gray-700 italic">„Labai šauni vieta poilsiui! Nameliai jaukūs, aplinka tvarkinga, tikrai sugrįšime dar kartą.“</p>
         <p class="text-sm text-right text-gray-600 mt-2">– Mantas iš Vilniaus</p>
@@ -54,21 +79,36 @@
 
     <!-- Submit Review Form -->
     <h3 class="text-2xl font-semibold mb-4">Palikite savo atsiliepimą</h3>
-    <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" class="bg-green-50 p-6 rounded shadow space-y-4">
+    <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" onsubmit="return validatePhoneNumber()" class="bg-green-50 p-6 rounded shadow space-y-4">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://pasalberta.lt/lt/thank-you.html">
+
       <div>
         <label for="name" class="block font-medium">Vardas:</label>
         <input type="text" id="name" name="Vardas" class="w-full border rounded p-2" required>
       </div>
+
       <div>
         <label for="city" class="block font-medium">Miestas:</label>
         <input type="text" id="city" name="Miestas" class="w-full border rounded p-2">
       </div>
+
+      <div>
+        <label for="email" class="block font-medium">El. paštas:</label>
+        <input type="email" id="email" name="Email" class="w-full border rounded p-2" placeholder="jusu@pavyzdys.lt" required>
+      </div>
+
+      <div>
+        <label for="phone" class="block font-medium">Telefono numeris:</label>
+        <input type="tel" id="phone" name="Telefonas" class="w-full border rounded p-2" placeholder="+37061234567" required>
+        <p class="text-sm text-gray-500 mt-1">Įrašykite su šalies kodu (pvz., +370)</p>
+      </div>
+
       <div>
         <label for="message" class="block font-medium">Jūsų atsiliepimas:</label>
         <textarea id="message" name="Atsiliepimas" rows="4" class="w-full border rounded p-2" required></textarea>
       </div>
+
       <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-900">Siųsti</button>
     </form>
   </section>
