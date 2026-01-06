@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accommodations - PasAlberta</title>
+  <meta name="description" content="PasAlberta estate has three houses: two sauna houses and a large event house with 13 rooms. Accommodates up to 32 guests.">
+  <meta name="keywords" content="accommodations, sauna house, event house, overnight stay, estate">
+  <meta name="author" content="PasAlberta">
+  <link rel="canonical" href="https://pasalberta.lt/en/accommodations.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-green-800 text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">PasAlberta.lt</h1>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="about.html" class="hover:underline">About Us</a>
+        <a href="accommodations.html" class="hover:underline font-semibold">Accommodations</a>
+        <a href="prices.html" class="hover:underline">Prices</a>
+        <a href="gallery.html" class="hover:underline">Gallery</a>
+        <a href="booking.html" class="hover:underline">Booking</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+        <a href="faq.html" class="hover:underline">FAQ</a>
+        <a href="reviews.html" class="hover:underline">Reviews</a>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-button" aria-label="Open menu">
+        ☰
+      </button>
+      
+      <!-- Language Switcher -->
+      <div>
+        <select onchange="location = this.value" class="text-black p-1 rounded">
+          <option value="/lt/accommodations.html">LT</option>
+          <option value="/en/accommodations.html" selected>EN</option>
+          <option value="/lv/accommodations.html">LV</option>
+          <option value="/pl/accommodations.html">PL</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="accommodations.html">Accommodations</a>
+      <a href="prices.html">Prices</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="reviews.html">Reviews</a>
+      <div class="mt-4">
+        <select onchange="location = this.value" class="text-black p-2 rounded w-full">
+          <option value="/lt/accommodations.html">🇱🇹 Lietuvių</option>
+          <option value="/en/accommodations.html" selected>🇬🇧 English</option>
+          <option value="/lv/accommodations.html">🇱🇻 Latviešu</option>
+          <option value="/pl/accommodations.html">🇵🇱 Polski</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Accommodation Section -->
+  <section class="max-w-6xl mx-auto p-8">
+    <h2 class="text-3xl font-bold mb-6">Accommodations</h2>
+    <p class="mb-8 text-gray-700">
+      Our estate has <strong>three houses</strong>:
+    </p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- House 1 -->
+      <div class="border rounded shadow p-4 hover-card">
+        <img src="../assets/pirtele1.jpg" alt="Sauna House 1" class="w-full h-64 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Sauna House 1</h3>
+        <p class="text-gray-700">A cottage with a mini kitchen, party hall and sauna on the first floor. The second floor has beds with the possibility to accommodate up to 15-17 people.</p>
+      </div>
+
+      <!-- House 2 -->
+      <div class="border rounded shadow p-4 hover-card">
+        <img src="../assets/pirtele2.jpg" alt="Sauna House 2" class="w-full h-64 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Sauna House 2</h3>
+        <p class="text-gray-700">
+          As comfortable as the first one, just slightly smaller: with a sauna, kitchenette and sleeping places on the second floor for up to 11-13 people.
+        </p>
+        <p class="text-sm text-gray-700 italic mt-2">
+          * This cottage is rented less frequently, mostly to returning guests who come just to warm up in the sauna, without overnight stay. :)
+        </p>
+      </div>
+
+      <!-- House 3 -->
+      <div class="md:col-span-2 border rounded shadow p-4 hover-card">
+        <img src="../assets/namas.png" alt="Large Event House" class="w-full h-64 object-cover rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Large Event House</h3>
+        <p class="text-gray-700">
+          This house has a spacious event hall that accommodates up to 44 people, 13 rooms with the possibility to accommodate up to 32 guests. A large, fully equipped kitchen. Perfect for larger events and family celebrations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white text-center p-4 mt-12">
+    <p>&copy; 2025 PasAlberta.lt. All rights reserved.</p>
+    <p class="mt-2 text-sm">
+      Phone: <a href="tel:+37061124895" class="underline hover:text-gray-300">+370 611 24895</a>
+    </p>
+  </footer>
+  
+  <!-- Custom JavaScript -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
