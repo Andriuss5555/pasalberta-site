@@ -1,0 +1,100 @@
+<!-- File: pl/index.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PasAlberta - Wypoczynek na łonie natury</title>
+  <meta name="description" content="PasAlberta - Gospodarstwo agroturystyczne do wynajęcia nad jeziorem. Domki z udogodnieniami, sala imprezowa, sauna, balia i przyjazna atmosfera na twoje uroczystości lub wypoczynek.">
+  <meta name="keywords" content="wynajem gospodarstwa, wypoczynek na łonie natury, sauna, balia, wesele na wsi, pasalberta, gospodarstwo nad jeziorem, agroturystyka, sala imprezowa">
+  <meta name="author" content="PasAlberta">
+  <link rel="canonical" href="https://pasalberta.lt/pl/index.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-green-800 text-white p-4 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">PasAlberta.lt</h1>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav space-x-4">
+        <a href="index.html" class="hover:underline font-semibold">Strona główna</a>
+        <a href="about.html" class="hover:underline">O nas</a>
+        <a href="accommodations.html" class="hover:underline">Zakwaterowanie</a>
+        <a href="prices.html" class="hover:underline">Cennik</a>
+        <a href="gallery.html" class="hover:underline">Galeria</a>
+        <a href="booking.html" class="hover:underline">Rezerwacja</a>
+        <a href="contact.html" class="hover:underline">Kontakt</a>
+        <a href="faq.html" class="hover:underline">FAQ</a>
+        <a href="reviews.html" class="hover:underline">Opinie</a>
+      </nav>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-button" aria-label="Open menu">
+        ☰
+      </button>
+      
+      <!-- Language Switcher -->
+      <div>
+        <select onchange="location = this.value" class="text-black p-1 rounded">
+          <option value="/lt/index.html">LT</option>
+          <option value="/en/index.html">EN</option>
+          <option value="/lv/index.html">LV</option>
+          <option value="/pl/index.html" selected>PL</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <a href="index.html">Strona główna</a>
+      <a href="about.html">O nas</a>
+      <a href="accommodations.html">Zakwaterowanie</a>
+      <a href="prices.html">Cennik</a>
+      <a href="gallery.html">Galeria</a>
+      <a href="booking.html">Rezerwacja</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="faq.html">FAQ</a>
+      <a href="reviews.html">Opinie</a>
+      <div class="mt-4">
+        <select onchange="location = this.value" class="text-black p-2 rounded w-full">
+          <option value="/lt/index.html">🇱🇹 Lietuvių</option>
+          <option value="/en/index.html">🇬🇧 English</option>
+          <option value="/lv/index.html">🇱🇻 Latviešu</option>
+          <option value="/pl/index.html" selected>🇵🇱 Polski</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-[70vh] flex items-center justify-center text-white" style="background-image: url('../assets/hero.jpg')">
+    <div class="bg-black/50 p-8 rounded">
+      <h2 class="text-4xl font-bold mb-2">Wypoczynek w otoczeniu natury</h2>
+      <p class="text-lg">Gospodarstwo agroturystyczne na twój wypoczynek i uroczystości</p>
+    </div>
+  </section>
+
+  <!-- Welcome Content -->
+  <main class="max-w-4xl mx-auto p-8">
+    <h3 class="text-2xl font-bold mb-4">Witamy w PasAlberta!</h3>
+    <p class="mb-4">Nasze gospodarstwo to oaza spokoju otoczona litewską przyrodą. Wynajmujemy przytulne domki ze wszystkimi udogodnieniami, boiska do koszykówki i siatkówki, saunę z balią i mnóstwo miejsca na wypoczynek lub imprezy.</p>
+    <p class="mb-4">Obejrzyj zdjęcia w sekcji galerii, przeczytaj opinie i zarezerwuj swój czas na łonie natury już dziś.</p>
+    <a href="booking.html" class="inline-block mt-4 px-6 py-2 bg-green-700 text-white rounded hover:bg-green-900">Zarezerwuj</a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white text-center p-4 mt-12">
+    <p>&copy; 2025 PasAlberta.lt. Wszelkie prawa zastrzeżone.</p>
+    <p class="mt-2 text-sm">
+      Telefon: <a href="tel:+37061124895" class="underline hover:text-gray-300">+370 611 24895</a>
+    </p>
+  </footer>
+  
+  <!-- Custom JavaScript -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
