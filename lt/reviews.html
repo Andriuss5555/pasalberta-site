@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atsiliepimai - PasAlberta</title>
+  <meta name="description" content="Skaitykite svečių atsiliepimus apie PasAlberta sodybą ir palikite savo atsiliepimą apie poilsį mūsų sodyboje.">
+  <meta name="keywords" content="PasAlberta atsiliepimai, svečių atsiliepimai, sodyba, kaimo turizmas">
+  <meta name="author" content="PasAlberta">
+  <link rel="canonical" href="https://pasalberta.lt/lt/reviews.html">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // Tailwind + form validation
@@ -39,13 +43,21 @@
         <a href="index.html" class="hover:underline">Pradžia</a>
         <a href="about.html" class="hover:underline">Apie mus</a>
         <a href="accommodations.html" class="hover:underline">Apgyvendinimas</a>
-        <a href="prices.html" class="hover:underline font-semibold">Kainininkas</a>
+        <a href="prices.html" class="hover:underline">Kainininkas</a>
         <a href="gallery.html" class="hover:underline">Galerija</a>
         <a href="booking.html" class="hover:underline">Rezervacija</a>
         <a href="contact.html" class="hover:underline">Kontaktai</a>
         <a href="faq.html" class="hover:underline">DUK</a>
         <a href="reviews.html" class="hover:underline font-semibold">Atsiliepimai</a>
       </nav>
+      <div>
+        <select onchange="location = this.value" class="text-black p-1 rounded">
+          <option value="/lt/reviews.html" selected>LT</option>
+          <option value="/en/reviews.html">EN</option>
+          <option value="/lv/reviews.html">LV</option>
+          <option value="/pl/reviews.html">PL</option>
+        </select>
+      </div>
     </div>
   </header>
 
@@ -56,24 +68,24 @@
     <div class="space-y-6 mb-12">
       <!-- Existing reviews -->
       <div class="border p-4 rounded shadow">
-        <p class="text-gray-700 italic">„Labai šauni vieta poilsiui! Nameliai jaukūs, aplinka tvarkinga, tikrai sugrįšime dar kartą.“</p>
-        <p class="text-sm text-right text-gray-600 mt-2">– Mantas iš Vilniaus</p>
+        <p class="text-gray-700 italic">"Labai šauni vieta poilsiui! Nameliai jaukūs, aplinka tvarkinga, tikrai sugrįšime dar kartą."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Mantas iš Vilniaus</p>
       </div>
       <div class="border p-4 rounded shadow">
-        <p class="text-gray-700 italic">„Puiki vieta švęsti gimtadienius ar tiesiog atsipalaiduoti. Labai malonūs šeimininkai.“</p>
-        <p class="text-sm text-right text-gray-600 mt-2">– Rūta iš Klaipėdos</p>
+        <p class="text-gray-700 italic">"Puiki vieta švęsti gimtadienius ar tiesiog atsipalaiduoti. Labai malonūs šeimininkai."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Rūta iš Klaipėdos</p>
       </div>
       <div class="border p-4 rounded shadow">
-        <p class="text-gray-700 italic">„Pirtis, gamta, ramybė – viskas ko reikia geram savaitgaliui. Ačiū!“</p>
-        <p class="text-sm text-right text-gray-600 mt-2">– Tomas ir Ieva</p>
+        <p class="text-gray-700 italic">"Pirtis, gamta, ramybė – viskas ko reikia geram savaitgaliui. Ačiū!"</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Tomas ir Ieva</p>
       </div>
       <div class="border p-4 rounded shadow">
-        <p class="text-gray-700 italic">„Esame labai patenkinti savo viešnage – viskas puikiai organizuota, vieta labai patogi, nuostabi gamta.“</p>
-        <p class="text-sm text-right text-gray-600 mt-2">– Lina iš Šiaulių</p>
+        <p class="text-gray-700 italic">"Esame labai patenkinti savo viešnage – viskas puikiai organizuota, vieta labai patogi, nuostabi gamta."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Lina iš Šiaulių</p>
       </div>
       <div class="border p-4 rounded shadow">
-        <p class="text-gray-700 italic">„Rekomenduojame visiems norintiems ramaus poilsio gamtoje su galimybe pasimėgauti pirtimi.“</p>
-        <p class="text-sm text-right text-gray-600 mt-2">– Jonas ir šeima</p>
+        <p class="text-gray-700 italic">"Rekomenduojame visiems norintiems ramaus poilsio gamtoje su galimybe pasimėgauti pirtimi."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Jonas ir šeima</p>
       </div>
     </div>
 
@@ -116,6 +128,9 @@
   <!-- Footer -->
   <footer class="bg-green-800 text-white text-center p-4 mt-12">
     <p>&copy; 2025 PasAlberta.lt. Visos teisės saugomos.</p>
+    <p class="mt-2 text-sm">
+      Telefonas: <a href="tel:+37061124895" class="underline hover:text-gray-300">+370 611 24895</a>
+    </p>
   </footer>
 </body>
 </html>
