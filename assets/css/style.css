@@ -1,0 +1,307 @@
+/* PasAlberta Custom Styles */
+/* Mobile-first responsive design */
+
+/* ========================================
+   MOBILE MENU STYLES
+======================================== */
+
+/* Hide mobile menu by default */
+.mobile-menu {
+  display: none;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Mobile menu open state */
+.mobile-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(22, 101, 52, 0.98);
+  z-index: 1000;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Mobile menu links */
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+  transition: padding-left 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  padding-left: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Close button in mobile menu */
+.mobile-menu-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+======================================== */
+
+/* Desktop navigation - hide on mobile */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    padding: 1rem !important;
+  }
+  
+  header h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Content padding */
+  section {
+    padding: 1.5rem !important;
+  }
+  
+  /* Grid adjustments */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  /* Typography */
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Language selector */
+  select {
+    font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   GALLERY LIGHTBOX STYLES
+======================================== */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 2001;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  z-index: 2001;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* ========================================
+   BACK TO TOP BUTTON
+======================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #166534;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  display: flex;
+}
+
+.back-to-top:hover {
+  background: #14532d;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================
+   SMOOTH ANIMATIONS
+======================================== */
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Hover effects for cards */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image hover effects */
+img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Button hover effects */
+button,
+a.inline-block {
+  transition: all 0.3s ease;
+}
+
+/* ========================================
+   UTILITY CLASSES
+======================================== */
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Loading state */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #166534;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+
+@media print {
+  .mobile-menu-button,
+  .back-to-top,
+  header nav,
+  footer {
+    display: none !important;
+  }
+}
