@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PasAlberta - Redirecting...</title>
+  <meta name="description" content="PasAlberta - Countryside accommodation rental in Lithuania">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #166534 0%, #14532d 100%);
+      color: white;
+    }
+    .loader {
+      text-align: center;
+    }
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .links {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 8px 16px;
+      border: 1px solid white;
+      border-radius: 4px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .links a:hover {
+      background: white;
+      color: #166534;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+    <h2>Loading PasAlberta...</h2>
+    <p>Redirecting to your language...</p>
+    <div class="links">
+      <a href="/lt/index.html">🇱🇹 Lietuvių</a>
+      <a href="/en/index.html">🇬🇧 English</a>
+      <a href="/lv/index.html">🇱🇻 Latviešu</a>
+      <a href="/pl/index.html">🇵🇱 Polski</a>
+    </div>
+  </div>
+
+  <script>
+    // Language detection and redirection
+    (function() {
+      // Get browser language
+      var userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.toLowerCase();
+      
+      // Map of supported languages
+      var languageMap = {
+        'lt': '/lt/index.html',  // Lithuanian
+        'en': '/en/index.html',  // English
+        'lv': '/lv/index.html',  // Latvian
+        'pl': '/pl/index.html'   // Polish
+      };
+      
+      // Extract language code (first 2 letters)
+      var langCode = userLang.substring(0, 2);
+      
+      // Check if we have a stored language preference
+      var storedLang = localStorage.getItem('preferredLanguage');
+      
+      // Priority: stored preference > browser language > default (Lithuanian)
+      var redirectUrl;
+      
+      if (storedLang && languageMap[storedLang]) {
+        redirectUrl = languageMap[storedLang];
+      } else if (languageMap[langCode]) {
+        redirectUrl = languageMap[langCode];
+      } else {
+        redirectUrl = '/lt/index.html'; // Default to Lithuanian
+      }
+      
+      // Redirect after a short delay (for better UX)
+      setTimeout(function() {
+        window.location.href = redirectUrl;
+      }, 500);
+    })();
+  </script>
+</body>
+</html>
