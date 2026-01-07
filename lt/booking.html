@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html lang="lv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Užsakymas - PasAlberta</title>
-  <meta name="description" content="Užsisakykite savo atostogas ar šventę sodyboje PasAlberta. Užpildykite formą ir užsisakykite vietą mūsų jaukioje sodyboje su pirtimi, kubiline vonia ir renginių sale.">
-  <meta name="keywords" content="sodybos užsakymas, kaimo turizmas, pirties namas, pasalberta, renginių salė, sodybos rezervacija, šventė gamtoje">
+  <title>Rezervācija - PasAlberta</title>
+  <meta name="description" content="Rezervējiet savu atpūtu vai svinības PasAlberta sētā. Aizpildiet formu un nodrošiniet savu vietu mūsu mājīgajā sētā ar pirti, karstās vannas un pasākumu zāli.">
+  <meta name="keywords" content="sētas rezervācija, lauku tūrisms, pirts māja, pasalberta, pasākumu zāle, sētas rezervēšana, svinības dabā">
   <meta name="author" content="PasAlberta">
-  <link rel="canonical" href="https://pasalberta.lt/lt/booking.html">
+  <link rel="canonical" href="https://pasalberta.lt/lv/booking.html">
   
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; frame-src https://calendar.google.com https://formsubmit.co;">
@@ -26,28 +26,28 @@
       
       <!-- Desktop Navigation -->
       <nav class="desktop-nav space-x-4">
-        <a href="index.html" class="hover:underline">Pradžia</a>
-        <a href="about.html" class="hover:underline">Apie mus</a>
-        <a href="accommodations.html" class="hover:underline">Apgyvendinimas</a>
-        <a href="prices.html" class="hover:underline">Kainos</a>
+        <a href="index.html" class="hover:underline">Sākums</a>
+        <a href="about.html" class="hover:underline">Par mums</a>
+        <a href="accommodations.html" class="hover:underline">Izmitināšana</a>
+        <a href="prices.html" class="hover:underline">Cenas</a>
         <a href="gallery.html" class="hover:underline">Galerija</a>
-        <a href="booking.html" class="hover:underline font-semibold">Užsakymas</a>
-        <a href="contact.html" class="hover:underline">Kontaktai</a>
-        <a href="faq.html" class="hover:underline">DUK</a>
-        <a href="reviews.html" class="hover:underline">Atsiliepimai</a>
+        <a href="booking.html" class="hover:underline font-semibold">Rezervācija</a>
+        <a href="contact.html" class="hover:underline">Kontakti</a>
+        <a href="faq.html" class="hover:underline">BUJ</a>
+        <a href="reviews.html" class="hover:underline">Atsauksmes</a>
       </nav>
       
       <!-- Mobile Menu Button -->
-      <button class="mobile-menu-button" aria-label="Atidaryti meniu">
+      <button class="mobile-menu-button" aria-label="Atvērt izvēlni">
         ☰
       </button>
       
       <!-- Language Switcher -->
       <div>
         <select onchange="location = this.value" class="text-black p-1 rounded">
-          <option value="/lt/booking.html" selected>LT</option>
+          <option value="/lt/booking.html">LT</option>
           <option value="/en/booking.html">EN</option>
-          <option value="/lv/booking.html">LV</option>
+          <option value="/lv/booking.html" selected>LV</option>
           <option value="/pl/booking.html">PL</option>
         </select>
       </div>
@@ -55,21 +55,21 @@
     
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-      <button class="mobile-menu-close" aria-label="Uždaryti meniu">&times;</button>
-      <a href="index.html">Pradžia</a>
-      <a href="about.html">Apie mus</a>
-      <a href="accommodations.html">Apgyvendinimas</a>
-      <a href="prices.html">Kainos</a>
+      <button class="mobile-menu-close" aria-label="Aizvērt izvēlni">&times;</button>
+      <a href="index.html">Sākums</a>
+      <a href="about.html">Par mums</a>
+      <a href="accommodations.html">Izmitināšana</a>
+      <a href="prices.html">Cenas</a>
       <a href="gallery.html">Galerija</a>
-      <a href="booking.html">Užsakymas</a>
-      <a href="contact.html">Kontaktai</a>
-      <a href="faq.html">DUK</a>
-      <a href="reviews.html">Atsiliepimai</a>
+      <a href="booking.html">Rezervācija</a>
+      <a href="contact.html">Kontakti</a>
+      <a href="faq.html">BUJ</a>
+      <a href="reviews.html">Atsauksmes</a>
       <div class="mt-4">
         <select onchange="location = this.value" class="text-black p-2 rounded w-full">
-          <option value="/lt/booking.html" selected>🇱🇹 Lietuvių</option>
+          <option value="/lt/booking.html">🇱🇹 Lietuvių</option>
           <option value="/en/booking.html">🇬🇧 English</option>
-          <option value="/lv/booking.html">🇱🇻 Latviešu</option>
+          <option value="/lv/booking.html" selected>🇱🇻 Latviešu</option>
           <option value="/pl/booking.html">🇵🇱 Polski</option>
         </select>
       </div>
@@ -78,51 +78,51 @@
 
   <!-- Booking Section -->
   <section class="max-w-4xl mx-auto p-8">
-    <h2 class="text-3xl font-bold text-center mb-6">Užsakymo forma</h2>
-    <p class="mb-6 text-gray-700 text-center">Užpildykite žemiau esančią formą ir mes su jumis susisieksime užsakymo patvirtinimui.</p>
+    <h2 class="text-3xl font-bold text-center mb-6">Rezervācijas forma</h2>
+    <p class="mb-6 text-gray-700 text-center">Aizpildiet zemāk esošo formu un mēs ar jums sazināsimies rezervācijas apstiprināšanai.</p>
 
     <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" class="bg-green-50 p-6 rounded-lg shadow-md space-y-4" id="booking-form">
-      <input type="hidden" name="_next" value="https://pasalberta.lt/lt/thank-you.html">
+      <input type="hidden" name="_next" value="https://pasalberta.lt/lv/thank-you.html">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_csrf_token" id="csrf-token">
-      <input type="hidden" name="_language" value="lt">
+      <input type="hidden" name="_language" value="lv">
       
       <!-- Honeypot field (hidden from real users, visible to bots) -->
       <input type="text" name="website" id="website" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <div>
-        <label class="block mb-1 font-semibold">Vardas Pavardė</label>
-        <input type="text" name="name" required class="w-full p-2 border rounded" placeholder="Jūsų vardas" minlength="2" maxlength="100">
+        <label class="block mb-1 font-semibold">Vārds Uzvārds</label>
+        <input type="text" name="name" required class="w-full p-2 border rounded" placeholder="Jūsu vārds" minlength="2" maxlength="100">
       </div>
 
       <div>
-        <label class="block mb-1 font-semibold">El. paštas</label>
-        <input type="email" name="email" required class="w-full p-2 border rounded" placeholder="pavyzdys@email.com" maxlength="100">
+        <label class="block mb-1 font-semibold">E-pasts</label>
+        <input type="email" name="email" required class="w-full p-2 border rounded" placeholder="piemers@epasts.lv" maxlength="100">
       </div>
 
       <div>
-        <label class="block mb-1 font-semibold">Telefono numeris</label>
-        <input type="tel" name="phone" required class="w-full p-2 border rounded" placeholder="+370..." pattern="[\+]?[0-9\s\-\(\)]+" maxlength="20">
+        <label class="block mb-1 font-semibold">Tālruņa numurs</label>
+        <input type="tel" name="phone" required class="w-full p-2 border rounded" placeholder="+371..." pattern="[\+]?[0-9\s\-\(\)]+" maxlength="20">
       </div>
 
       <div>
-        <label class="block mb-1 font-semibold">Užsakymo data</label>
+        <label class="block mb-1 font-semibold">Rezervācijas datums</label>
         <input type="date" name="date" required class="w-full p-2 border rounded" id="booking-date">
       </div>
 
       <div>
-        <label class="block mb-1 font-semibold">Žinutė</label>
-        <textarea name="message" rows="4" class="w-full p-2 border rounded" placeholder="Papildoma informacija..." maxlength="1000"></textarea>
+        <label class="block mb-1 font-semibold">Ziņojums</label>
+        <textarea name="message" rows="4" class="w-full p-2 border rounded" placeholder="Papildu informācija..." maxlength="1000"></textarea>
       </div>
 
-      <button type="submit" class="w-full bg-green-700 text-white py-2 px-4 rounded hover:bg-green-900" id="submit-btn">Siųsti užklausą</button>
+      <button type="submit" class="w-full bg-green-700 text-white py-2 px-4 rounded hover:bg-green-900" id="submit-btn">Nosūtīt pieprasījumu</button>
     </form>
   </section>
 
   <!-- Google Calendar Embed Section -->
   <section class="max-w-4xl mx-auto p-8">
-    <h2 class="text-2xl font-bold text-center mb-4">Užimtumo kalendorius</h2>
-    <p class="text-center text-gray-700 mb-6">Čia galite peržiūrėti sodybos užimtumą:</p>
+    <h2 class="text-2xl font-bold text-center mb-4">Pieejamības kalendārs</h2>
+    <p class="text-center text-gray-700 mb-6">Šeit varat apskatīt sētas pieejamību:</p>
     <div class="overflow-hidden rounded-lg shadow-md">
       <iframe src="https://calendar.google.com/calendar/embed?src=sodybapasalberta%40gmail.com&ctz=Europe%2FVilnius" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
@@ -130,9 +130,9 @@
 
   <!-- Footer -->
   <footer class="bg-green-800 text-white text-center p-4 mt-12">
-    <p>&copy; 2025 PasAlberta.lt. Visos teisės saugomos.</p>
+    <p>&copy; 2025 PasAlberta.lt. Visas tiesības aizsargātas.</p>
     <p class="mt-2 text-sm">
-      Telefonas: <a href="tel:+37061124895" class="underline hover:text-gray-300">+370 611 24895</a>
+      Tālrunis: <a href="tel:+37061124895" class="underline hover:text-gray-300">+370 611 24895</a>
     </p>
   </footer>
   
