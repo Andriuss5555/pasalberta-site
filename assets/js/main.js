@@ -1,8 +1,36 @@
 // PasAlberta Main JavaScript
-// Mobile menu, lightbox, back-to-top, and animations
+// Mobile menu, lightbox, back-to-top, animations, and language switching
 
 (function() {
   'use strict';
+
+  // ========================================
+  // LANGUAGE PREFERENCE HANDLER
+  // ========================================
+  
+  function initLanguageSwitcher() {
+    const languageSelects = document.querySelectorAll('select[onchange*="location"]');
+    
+    languageSelects.forEach(function(select) {
+      // Remove inline onchange attribute
+      select.removeAttribute('onchange');
+      
+      // Add event listener
+      select.addEventListener('change', function() {
+        const selectedUrl = this.value;
+        
+        // Extract language code from URL (e.g., /lt/, /en/, /lv/, /pl/)
+        const langMatch = selectedUrl.match(/\/(lt|en|lv|pl)\//);
+        if (langMatch) {
+          // Store language preference
+          localStorage.setItem('preferredLanguage', langMatch[1]);
+        }
+        
+        // Navigate to selected language
+        window.location.href = selectedUrl;
+      });
+    });
+  }
 
   // ========================================
   // MOBILE MENU FUNCTIONALITY
@@ -255,7 +283,15 @@
         
         if (!isValid) {
           e.preventDefault();
-          alert('Prašome užpildyti visus privalomus laukus.');
+          // Get language-specific alert message
+          const lang = document.documentElement.lang || 'lt';
+          const messages = {
+            'lt': 'Prašome užpildyti visus privalomus laukus.',
+            'en': 'Please fill in all required fields.',
+            'lv': 'Lūdzu, aizpildiet visus obligātos laukus.',
+            'pl': 'Proszę wypełnić wszystkie wymagane pola.'
+          };
+          alert(messages[lang] || messages['lt']);
         }
       });
     });
@@ -279,6 +315,7 @@
   // ========================================
   
   function init() {
+    initLanguageSwitcher();
     initMobileMenu();
     initLightbox();
     initBackToTop();
