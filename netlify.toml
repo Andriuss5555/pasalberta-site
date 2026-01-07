@@ -1,0 +1,150 @@
+# Netlify Configuration for PasAlberta
+# This file configures security headers and redirects for Netlify hosting
+
+# ========================================
+# HTTPS REDIRECT
+# ========================================
+[[redirects]]
+  from = "http://pasalberta.lt/*"
+  to = "https://pasalberta.lt/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.pasalberta.lt/*"
+  to = "https://pasalberta.lt/:splat"
+  status = 301
+  force = true
+
+# ========================================
+# SECURITY HEADERS
+# ========================================
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # X-Content-Type-Options: Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    
+    # X-Frame-Options: Prevent clickjacking (SAMEORIGIN needed for Google Calendar)
+    X-Frame-Options = "SAMEORIGIN"
+    
+    # X-XSS-Protection: Enable browser XSS filter (legacy support)
+    X-XSS-Protection = "1; mode=block"
+    
+    # Referrer-Policy: Control referrer information
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Content-Security-Policy: Comprehensive XSS protection
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://calendar.google.com https://www.googletagmanager.com https://www.google.com;
+      style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com;
+      img-src 'self' data: https: blob:;
+      font-src 'self' data: https://fonts.gstatic.com;
+      connect-src 'self' https://formsubmit.co;
+      frame-src https://calendar.google.com https://www.google.com;
+      frame-ancestors 'self';
+      form-action 'self' https://formsubmit.co;
+      base-uri 'self';
+      object-src 'none';
+      upgrade-insecure-requests;
+    """
+    
+    # Strict-Transport-Security: Force HTTPS (Netlify provides SSL automatically)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # Permissions-Policy: Control browser features
+    Permissions-Policy = """
+      geolocation=(),
+      microphone=(),
+      camera=(),
+      payment=(),
+      usb=(),
+      magnetometer=(),
+      gyroscope=(),
+      accelerometer=(),
+      ambient-light-sensor=(),
+      autoplay=(),
+      encrypted-media=(),
+      fullscreen=(self),
+      picture-in-picture=()
+    """
+    
+    # Cross-Origin policies
+    Cross-Origin-Embedder-Policy = "unsafe-none"
+    Cross-Origin-Opener-Policy = "same-origin-allow-popups"
+    Cross-Origin-Resource-Policy = "cross-origin"
+    
+    # Remove server information
+    X-Powered-By = ""
+
+# ========================================
+# CACHE CONTROL
+# ========================================
+
+# Cache static assets for 1 year
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.gif"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Don't cache HTML files
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ========================================
+# BUILD SETTINGS
+# ========================================
+[build]
+  publish = "."
+  command = "echo 'No build command needed for static site'"
+
+# ========================================
+# ERROR PAGES
+# ========================================
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
