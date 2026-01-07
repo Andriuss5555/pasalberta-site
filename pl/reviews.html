@@ -3,25 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reviews - PasAlberta</title>
-  <meta name="description" content="Read guest reviews about PasAlberta estate and leave your own review about your vacation at our estate.">
-  <meta name="keywords" content="PasAlberta reviews, guest reviews, estate, rural tourism">
+  <title>Opinie - PasAlberta</title>
+  <meta name="description" content="Przeczytaj opinie gości o gospodarstwie PasAlberta i zostaw swoją opinię o wakacjach w naszym gospodarstwie.">
+  <meta name="keywords" content="PasAlberta opinie, opinie gości, gospodarstwo, turystyka wiejska">
   <meta name="author" content="PasAlberta">
-  <link rel="canonical" href="https://pasalberta.lt/en/reviews.html">
+  <link rel="canonical" href="https://pasalberta.lt/pl/reviews.html">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; frame-src https://formsubmit.co;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script>
-    function validatePhoneNumber() {
-      const phone = document.getElementById('phone').value.trim();
-      const phoneRegex = /^\+\d{8,15}$/;
-
-      if (!phoneRegex.test(phone)) {
-        alert("Please enter a valid phone number with country code (e.g., +37061234567).");
-        return false;
-      }
-      return true;
-    }
-  </script>
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header -->
@@ -31,10 +26,10 @@
       
       <!-- Desktop Navigation -->
       <nav class="desktop-nav space-x-4">
-        <a href="index.html" class="hover:underline">Strona gÅ‚Ã³wna</a>
+        <a href="index.html" class="hover:underline">Start</a>
         <a href="about.html" class="hover:underline">O nas</a>
         <a href="accommodations.html" class="hover:underline">Zakwaterowanie</a>
-        <a href="prices.html" class="hover:underline">Cennik</a>
+        <a href="prices.html" class="hover:underline">Ceny</a>
         <a href="gallery.html" class="hover:underline">Galeria</a>
         <a href="booking.html" class="hover:underline">Rezerwacja</a>
         <a href="contact.html" class="hover:underline">Kontakt</a>
@@ -43,8 +38,8 @@
       </nav>
       
       <!-- Mobile Menu Button -->
-      <button class="mobile-menu-button" aria-label="Open menu">
-        â˜°
+      <button class="mobile-menu-button" aria-label="Otwórz menu">
+        ☰
       </button>
       
       <!-- Language Switcher -->
@@ -60,11 +55,11 @@
     
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
-      <a href="index.html">Strona gÅ‚Ã³wna</a>
+      <button class="mobile-menu-close" aria-label="Zamknij menu">&times;</button>
+      <a href="index.html">Start</a>
       <a href="about.html">O nas</a>
       <a href="accommodations.html">Zakwaterowanie</a>
-      <a href="prices.html">Cennik</a>
+      <a href="prices.html">Ceny</a>
       <a href="gallery.html">Galeria</a>
       <a href="booking.html">Rezerwacja</a>
       <a href="contact.html">Kontakt</a>
@@ -72,10 +67,10 @@
       <a href="reviews.html">Opinie</a>
       <div class="mt-4">
         <select onchange="location = this.value" class="text-black p-2 rounded w-full">
-          <option value="/lt/reviews.html">ðŸ‡±ðŸ‡¹ LietuviÅ³</option>
-          <option value="/en/reviews.html">ðŸ‡¬ðŸ‡§ English</option>
-          <option value="/lv/reviews.html">ðŸ‡±ðŸ‡» LatvieÅ¡u</option>
-          <option value="/pl/reviews.html" selected>ðŸ‡µðŸ‡± Polski</option>
+          <option value="/lt/reviews.html">🇱🇹 Lietuvių</option>
+          <option value="/en/reviews.html">🇬🇧 English</option>
+          <option value="/lv/reviews.html">🇱🇻 Latviešu</option>
+          <option value="/pl/reviews.html" selected>🇵🇱 Polski</option>
         </select>
       </div>
     </div>
@@ -83,71 +78,80 @@
 
   <!-- Reviews Section -->
   <section class="max-w-4xl mx-auto p-8">
-    <h2 class="text-3xl font-bold mb-6 text-center">Guest Reviews</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center">Opinie gości</h2>
 
     <div class="space-y-6 mb-12">
       <!-- Existing reviews -->
       <div class="border p-4 rounded shadow hover-card">
-        <p class="text-gray-700 italic">"Very nice place for vacation! The cottages are cozy, the environment is tidy, we will definitely come back again."</p>
-        <p class="text-sm text-right text-gray-600 mt-2">â€” Mantas from Vilnius</p>
+        <p class="text-gray-700 italic">"Bardzo miłe miejsce na wakacje! Domki przytulne, otoczenie zadbane, na pewno wrócimy ponownie."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Mantas z Wilna</p>
       </div>
       <div class="border p-4 rounded shadow hover-card">
-        <p class="text-gray-700 italic">"Great place to celebrate birthdays or just relax. Very pleasant hosts."</p>
-        <p class="text-sm text-right text-gray-600 mt-2">â€” RÅ«ta from KlaipÄ—da</p>
+        <p class="text-gray-700 italic">"Świetne miejsce do świętowania urodzin lub po prostu odpoczynku. Bardzo mili gospodarze."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Rūta z Kłajpedy</p>
       </div>
       <div class="border p-4 rounded shadow hover-card">
-        <p class="text-gray-700 italic">"Sauna, nature, tranquility - everything you need for a good weekend. Thank you!"</p>
-        <p class="text-sm text-right text-gray-600 mt-2">â€” Tomas and Ieva</p>
+        <p class="text-gray-700 italic">"Sauna, natura, spokój - wszystko czego potrzeba na dobry weekend. Dziękujemy!"</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Tomas i Ieva</p>
       </div>
       <div class="border p-4 rounded shadow hover-card">
-        <p class="text-gray-700 italic">"We are very satisfied with our stay - everything was perfectly organized, the place is very convenient, wonderful nature."</p>
-        <p class="text-sm text-right text-gray-600 mt-2">â€” Lina from Å iauliai</p>
+        <p class="text-gray-700 italic">"Jesteśmy bardzo zadowoleni z naszego pobytu - wszystko było perfekcyjnie zorganizowane, miejsce bardzo wygodne, wspaniała natura."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Lina z Szawli</p>
       </div>
       <div class="border p-4 rounded shadow hover-card">
-        <p class="text-gray-700 italic">"We recommend to everyone who wants a peaceful vacation in nature with the opportunity to enjoy the sauna."</p>
-        <p class="text-sm text-right text-gray-600 mt-2">â€” Jonas and family</p>
+        <p class="text-gray-700 italic">"Polecamy wszystkim, którzy chcą spokojnego wypoczynku na łonie natury z możliwością korzystania z sauny."</p>
+        <p class="text-sm text-right text-gray-600 mt-2">— Jonas i rodzina</p>
       </div>
     </div>
 
     <!-- Submit Review Form -->
-    <h3 class="text-2xl font-semibold mb-4">Leave Your Review</h3>
-    <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" onsubmit="return validatePhoneNumber()" class="bg-green-50 p-6 rounded shadow space-y-4">
+    <h3 class="text-2xl font-semibold mb-4">Zostaw swoją opinię</h3>
+    <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" class="bg-green-50 p-6 rounded shadow space-y-4" id="review-form">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://pasalberta.lt/en/thank-you.html">
+      <input type="hidden" name="_next" value="https://pasalberta.lt/pl/thank-you.html">
+      <input type="hidden" name="_csrf_token" id="csrf-token">
+      <input type="hidden" name="_language" value="pl">
+      <input type="hidden" name="_subject" value="Nowa opinia z PasAlberta.lt">
+      
+      <!-- Honeypot fields -->
+      <input type="text" name="website" id="website" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="text" name="url" id="url" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="email" name="email_confirm" id="email_confirm" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <div>
-        <label for="name" class="block font-medium">Name:</label>
-        <input type="text" id="name" name="Name" class="w-full border rounded p-2" required>
+        <label for="name" class="block font-medium">Imię: <span class="text-red-600">*</span></label>
+        <input type="text" id="name" name="Imię" class="w-full border rounded p-2" required minlength="2" maxlength="100" pattern="[A-Za-zÀ-żĄ-Żą-ż\s\-']+" title="Proszę wpisać poprawne imię (tylko litery)">
       </div>
 
       <div>
-        <label for="city" class="block font-medium">City:</label>
-        <input type="text" id="city" name="City" class="w-full border rounded p-2">
+        <label for="city" class="block font-medium">Miasto:</label>
+        <input type="text" id="city" name="Miasto" class="w-full border rounded p-2" maxlength="100" pattern="[A-Za-zÀ-żĄ-Żą-ż\s\-']*">
       </div>
 
       <div>
-        <label for="email" class="block font-medium">Email:</label>
-        <input type="email" id="email" name="Email" class="w-full border rounded p-2" placeholder="your@example.com" required>
+        <label for="email" class="block font-medium">E-mail: <span class="text-red-600">*</span></label>
+        <input type="email" id="email" name="Email" class="w-full border rounded p-2" placeholder="twoj@przyklad.pl" required maxlength="100">
       </div>
 
       <div>
-        <label for="phone" class="block font-medium">Phone Number:</label>
-        <input type="tel" id="phone" name="Phone" class="w-full border rounded p-2" placeholder="+37061234567" required>
-        <p class="text-sm text-gray-500 mt-1">Enter with country code (e.g., +370)</p>
+        <label for="phone" class="block font-medium">Numer telefonu: <span class="text-red-600">*</span></label>
+        <input type="tel" id="phone" name="Telefon" class="w-full border rounded p-2" placeholder="+48123456789" required pattern="[\+][0-9]{8,15}" maxlength="20">
+        <p class="text-sm text-gray-500 mt-1">Wpisz z kodem kraju (np. +48)</p>
       </div>
 
       <div>
-        <label for="message" class="block font-medium">Your Review:</label>
-        <textarea id="message" name="Review" rows="4" class="w-full border rounded p-2" required></textarea>
+        <label for="message" class="block font-medium">Twoja opinia: <span class="text-red-600">*</span></label>
+        <textarea id="message" name="Opinia" rows="4" class="w-full border rounded p-2" required minlength="10" maxlength="2000"></textarea>
+        <p class="text-sm text-gray-500 mt-1">Minimum 10 znaków, maksimum 2000 znaków</p>
       </div>
 
-      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-900">Submit</button>
+      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-900" id="submit-btn">Wyślij opinię</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer class="bg-green-800 text-white text-center p-4 mt-12">
-    <p>&copy; 2025 PasAlberta.lt. Wszelkie prawa zastrzeÅ¼one.</p>
+    <p>&copy; 2025 PasAlberta.lt. Wszelkie prawa zastrzeżone.</p>
     <p class="mt-2 text-sm">
       Telefon: <a href="tel:+37061124895" class="underline hover:text-gray-300">+370 611 24895</a>
     </p>
@@ -155,5 +159,6 @@
   
   <!-- Custom JavaScript -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/security.js"></script>
 </body>
 </html>
