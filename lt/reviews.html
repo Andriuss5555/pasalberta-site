@@ -8,20 +8,15 @@
   <meta name="keywords" content="PasAlberta atsiliepimai, svečių atsiliepimai, sodyba, kaimo turizmas">
   <meta name="author" content="PasAlberta">
   <link rel="canonical" href="https://pasalberta.lt/lt/reviews.html">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; frame-src https://formsubmit.co;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script>
-    function validatePhoneNumber() {
-      const phone = document.getElementById('phone').value.trim();
-      const phoneRegex = /^\+\d{8,15}$/;
-
-      if (!phoneRegex.test(phone)) {
-        alert("Įveskite teisingą telefono numerį su šalies kodu (pvz., +37061234567).");
-        return false;
-      }
-      return true;
-    }
-  </script>
 </head>
 <body class="bg-white text-gray-800">
   <!-- Header -->
@@ -34,16 +29,16 @@
         <a href="index.html" class="hover:underline">Pradžia</a>
         <a href="about.html" class="hover:underline">Apie mus</a>
         <a href="accommodations.html" class="hover:underline">Apgyvendinimas</a>
-        <a href="prices.html" class="hover:underline">Kainininkas</a>
+        <a href="prices.html" class="hover:underline">Kainos</a>
         <a href="gallery.html" class="hover:underline">Galerija</a>
-        <a href="booking.html" class="hover:underline">Rezervacija</a>
+        <a href="booking.html" class="hover:underline">Užsakymas</a>
         <a href="contact.html" class="hover:underline">Kontaktai</a>
         <a href="faq.html" class="hover:underline">DUK</a>
         <a href="reviews.html" class="hover:underline font-semibold">Atsiliepimai</a>
       </nav>
       
       <!-- Mobile Menu Button -->
-      <button class="mobile-menu-button" aria-label="Open menu">
+      <button class="mobile-menu-button" aria-label="Atidaryti meniu">
         ☰
       </button>
       
@@ -60,13 +55,13 @@
     
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-      <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+      <button class="mobile-menu-close" aria-label="Uždaryti meniu">&times;</button>
       <a href="index.html">Pradžia</a>
       <a href="about.html">Apie mus</a>
       <a href="accommodations.html">Apgyvendinimas</a>
-      <a href="prices.html">Kainininkas</a>
+      <a href="prices.html">Kainos</a>
       <a href="gallery.html">Galerija</a>
-      <a href="booking.html">Rezervacija</a>
+      <a href="booking.html">Užsakymas</a>
       <a href="contact.html">Kontaktai</a>
       <a href="faq.html">DUK</a>
       <a href="reviews.html">Atsiliepimai</a>
@@ -111,37 +106,46 @@
 
     <!-- Submit Review Form -->
     <h3 class="text-2xl font-semibold mb-4">Palikite savo atsiliepimą</h3>
-    <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" onsubmit="return validatePhoneNumber()" class="bg-green-50 p-6 rounded shadow space-y-4">
+    <form action="https://formsubmit.co/sodybapasalberta@gmail.com" method="POST" class="bg-green-50 p-6 rounded shadow space-y-4" id="review-form">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://pasalberta.lt/lt/thank-you.html">
+      <input type="hidden" name="_csrf_token" id="csrf-token">
+      <input type="hidden" name="_language" value="lt">
+      <input type="hidden" name="_subject" value="Naujas atsiliepimas iš PasAlberta.lt">
+      
+      <!-- Honeypot fields -->
+      <input type="text" name="website" id="website" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="text" name="url" id="url" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="email" name="email_confirm" id="email_confirm" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <div>
-        <label for="name" class="block font-medium">Vardas:</label>
-        <input type="text" id="name" name="Vardas" class="w-full border rounded p-2" required>
+        <label for="name" class="block font-medium">Vardas: <span class="text-red-600">*</span></label>
+        <input type="text" id="name" name="Vardas" class="w-full border rounded p-2" required minlength="2" maxlength="100" pattern="[A-Za-zÀ-žĄ-Žą-ž\s\-']+" title="Įveskite teisingą vardą (tik raidės)">
       </div>
 
       <div>
         <label for="city" class="block font-medium">Miestas:</label>
-        <input type="text" id="city" name="Miestas" class="w-full border rounded p-2">
+        <input type="text" id="city" name="Miestas" class="w-full border rounded p-2" maxlength="100" pattern="[A-Za-zÀ-žĄ-Žą-ž\s\-']*">
       </div>
 
       <div>
-        <label for="email" class="block font-medium">El. paštas:</label>
-        <input type="email" id="email" name="Email" class="w-full border rounded p-2" placeholder="jusu@pavyzdys.lt" required>
+        <label for="email" class="block font-medium">El. paštas: <span class="text-red-600">*</span></label>
+        <input type="email" id="email" name="Email" class="w-full border rounded p-2" placeholder="jusu@pavyzdys.lt" required maxlength="100">
       </div>
 
       <div>
-        <label for="phone" class="block font-medium">Telefono numeris:</label>
-        <input type="tel" id="phone" name="Telefonas" class="w-full border rounded p-2" placeholder="+37061234567" required>
+        <label for="phone" class="block font-medium">Telefono numeris: <span class="text-red-600">*</span></label>
+        <input type="tel" id="phone" name="Telefonas" class="w-full border rounded p-2" placeholder="+37061234567" required pattern="[\+][0-9]{8,15}" maxlength="20">
         <p class="text-sm text-gray-500 mt-1">Įrašykite su šalies kodu (pvz., +370)</p>
       </div>
 
       <div>
-        <label for="message" class="block font-medium">Jūsų atsiliepimas:</label>
-        <textarea id="message" name="Atsiliepimas" rows="4" class="w-full border rounded p-2" required></textarea>
+        <label for="message" class="block font-medium">Jūsų atsiliepimas: <span class="text-red-600">*</span></label>
+        <textarea id="message" name="Atsiliepimas" rows="4" class="w-full border rounded p-2" required minlength="10" maxlength="2000"></textarea>
+        <p class="text-sm text-gray-500 mt-1">Mažiausiai 10 simbolių, daugiausiai 2000 simbolių</p>
       </div>
 
-      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-900">Siųsti</button>
+      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-900" id="submit-btn">Siųsti atsiliepimą</button>
     </form>
   </section>
 
@@ -155,5 +159,6 @@
   
   <!-- Custom JavaScript -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/security.js"></script>
 </body>
 </html>
